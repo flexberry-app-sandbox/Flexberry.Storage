@@ -1,0 +1,81 @@
+﻿{
+  "applicationCaption": "Storage",
+  "applicationTitle": "Storage",
+  "items": [
+    {
+      "link": null,
+      "menuName": "storage",
+      "caption": "Storage",
+      "title": "Storage",
+      "children": [
+        {
+          "link": null,
+          "menuName": "информация-о-заказе",
+          "caption": "Информация о заказе",
+          "title": "Информация о заказе",
+          "children": [
+            {
+              "link": "i-i-s-storage-накладная-l",
+              "menuName": null,
+              "caption": "Накладная",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-storage-заказ-l",
+              "menuName": null,
+              "caption": "Заказ",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-storage-документ-l",
+              "menuName": null,
+              "caption": "Документ",
+              "title": "",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "сотрудники",
+          "caption": "Сотрудники",
+          "title": "Сотрудники",
+          "children": [
+            {
+              "link": "i-i-s-storage-сотрудник-l",
+              "menuName": null,
+              "caption": "Сотрудник",
+              "title": "",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "товар-на-складе",
+          "caption": "Товар на складе",
+          "title": "Товар на складе",
+          "children": [
+            {
+              "link": "i-i-s-storage-склад-l",
+              "menuName": null,
+              "caption": "Склад",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-storage-товар-l",
+              "menuName": null,
+              "caption": "Товар",
+              "title": "",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

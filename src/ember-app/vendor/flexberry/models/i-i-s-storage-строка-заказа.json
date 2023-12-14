@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISStorageСтрокаЗаказа",
+  "modelName": "i-i-s-storage-строка-заказа",
+  "className": "СтрокаЗаказа",
+  "nameSpace": "IIS.Storage",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "нДС",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-storage-заказ",
+      "inverse": "строкаЗаказа"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СтрокаЗаказаE",
+      "modelName": "i-i-s-storage-строка-заказа",
+      "attrs": [
+        {
+          "name": "нДС",
+          "caption": "НДС",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

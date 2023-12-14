@@ -1,0 +1,139 @@
+﻿{
+  "name": "IISStorageЗаказ",
+  "modelName": "i-i-s-storage-заказ",
+  "className": "Заказ",
+  "nameSpace": "IIS.Storage",
+  "parentModelName": "i-i-s-storage-документ",
+  "parentClassName": "Документ",
+  "attrs": [
+    {
+      "name": "датаОплаты",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОтгрузки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статус",
+      "type": "i-i-s-storage-состояние-заказа",
+      "flexberryType": "СостояниеЗаказа",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-storage-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "строкаЗаказа",
+      "relatedTo": "i-i-s-storage-строка-заказа",
+      "inverse": "заказ"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ЗаказE",
+      "modelName": "i-i-s-storage-заказ",
+      "attrs": [
+        {
+          "name": "датаОплаты",
+          "caption": "Дата оплаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОтгрузки",
+          "caption": "Дата отгрузки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СтрокаЗаказаE",
+          "caption": "Строка заказа",
+          "name": "строкаЗаказа",
+          "relatedTo": "i-i-s-storage-строка-заказа",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ЗаказL",
+      "modelName": "i-i-s-storage-заказ",
+      "attrs": [
+        {
+          "name": "датаОплаты",
+          "caption": "Дата оплаты",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОтгрузки",
+          "caption": "Дата отгрузки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

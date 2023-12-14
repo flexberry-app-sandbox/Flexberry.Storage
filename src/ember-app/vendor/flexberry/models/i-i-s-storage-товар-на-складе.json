@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISStorageТоварНаСкладе",
+  "modelName": "i-i-s-storage-товар-на-складе",
+  "className": "ТоварНаСкладе",
+  "nameSpace": "IIS.Storage",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "количество",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номерЯчейки",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "ряд",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "этаж",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склад",
+      "relatedTo": "i-i-s-storage-склад",
+      "inverse": "товарНаСкладе"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТоварНаСкладеE",
+      "modelName": "i-i-s-storage-товар-на-складе",
+      "attrs": [
+        {
+          "name": "количество",
+          "caption": "Количество",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

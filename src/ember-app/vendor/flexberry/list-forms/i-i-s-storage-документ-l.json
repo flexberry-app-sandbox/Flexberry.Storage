@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-storage-документ-e",
+  "editForm": "i-i-s-storage-документ-e",
+  "external": false,
+  "caption": "Документ",
+  "name": "IISStorageДокументL",
+  "className": "ДокументL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-документ",
+      "modelProjection": "ДокументL"
+    }
+  ]
+}

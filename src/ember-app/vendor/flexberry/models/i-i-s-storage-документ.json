@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISStorageДокумент",
+  "modelName": "i-i-s-storage-документ",
+  "className": "Документ",
+  "nameSpace": "IIS.Storage",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаЗаполнения",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДокументE",
+      "modelName": "i-i-s-storage-документ",
+      "attrs": [
+        {
+          "name": "датаЗаполнения",
+          "caption": "Дата заполнения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ДокументL",
+      "modelName": "i-i-s-storage-документ",
+      "attrs": [
+        {
+          "name": "датаЗаполнения",
+          "caption": "Дата заполнения",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

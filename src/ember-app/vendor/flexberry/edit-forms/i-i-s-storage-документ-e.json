@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Документ",
+  "name": "IISStorageДокументE",
+  "className": "ДокументE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-документ",
+      "modelProjection": "ДокументE"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISStorageЗаказE",
+  "className": "ЗаказE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-заказ",
+      "modelProjection": "ЗаказE"
+    }
+  ]
+}

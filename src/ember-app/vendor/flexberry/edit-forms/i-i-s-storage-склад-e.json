@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Склад",
+  "name": "IISStorageСкладE",
+  "className": "СкладE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-склад",
+      "modelProjection": "СкладE"
+    }
+  ]
+}

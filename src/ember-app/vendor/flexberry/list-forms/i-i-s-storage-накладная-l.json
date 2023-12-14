@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-storage-накладная-e",
+  "editForm": "i-i-s-storage-накладная-e",
+  "external": false,
+  "caption": "Накладная",
+  "name": "IISStorageНакладнаяL",
+  "className": "НакладнаяL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-накладная",
+      "modelProjection": "НакладнаяL"
+    }
+  ]
+}

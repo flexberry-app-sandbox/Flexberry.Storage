@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-storage-сотрудник-e",
+  "editForm": "i-i-s-storage-сотрудник-e",
+  "external": false,
+  "caption": "Сотрудник",
+  "name": "IISStorageСотрудникL",
+  "className": "СотрудникL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-сотрудник",
+      "modelProjection": "СотрудникL"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+<h3 class="ui header">{{t "forms.i-i-s-storage-накладная-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.примечание
+      class=(if (v-get validationModel "примечание" "isInvalid") "error")
+      label=(t "forms.i-i-s-storage-накладная-e.примечание-caption")
+      data-test-i-i-s-storage-накладная-e-примечание=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "примечание" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.сумма
+      class=(if (v-get validationModel "сумма" "isInvalid") "error")
+      label=(t "forms.i-i-s-storage-накладная-e.сумма-caption")
+      data-test-i-i-s-storage-накладная-e-сумма=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сумма" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-storage-накладная-e.датаОтгрузки-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаОтгрузки
+      class=(if (v-get validationModel "датаОтгрузки" "isInvalid") "error")
+      data-test-i-i-s-storage-накладная-e-датаОтгрузки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаОтгрузки" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.вес
+      class=(if (v-get validationModel "вес" "isInvalid") "error")
+      label=(t "forms.i-i-s-storage-накладная-e.вес-caption")
+      data-test-i-i-s-storage-накладная-e-вес=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "вес" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-storage-накладная-e-статус="true">
+    <label>{{t "forms.i-i-s-storage-накладная-e.статус-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-storage-состояние-накладной")
+      value=model.статус
+      class=(if (v-get validationModel "статус" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "статус" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИОПолучателя
+      class=(if (v-get validationModel "фИОПолучателя" "isInvalid") "error")
+      label=(t "forms.i-i-s-storage-накладная-e.фИОПолучателя-caption")
+      data-test-i-i-s-storage-накладная-e-фИОПолучателя=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "фИОПолучателя" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-storage-накладная-e.записьВНакладной-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="записьВНакладнойGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.записьВНакладной
+      content=model.записьВНакладной
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "записьВНакладной" "isInvalid") "error")
+      data-test-i-i-s-storage-накладная-e-записьВНакладной=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "записьВНакладной" "message")}}
+  </div>
+</form>

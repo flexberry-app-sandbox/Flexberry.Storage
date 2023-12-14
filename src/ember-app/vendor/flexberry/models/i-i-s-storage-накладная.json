@@ -1,0 +1,181 @@
+﻿{
+  "name": "IISStorageНакладная",
+  "modelName": "i-i-s-storage-накладная",
+  "className": "Накладная",
+  "nameSpace": "IIS.Storage",
+  "parentModelName": "i-i-s-storage-документ",
+  "parentClassName": "Документ",
+  "attrs": [
+    {
+      "name": "вес",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаОтгрузки",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "примечание",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статус",
+      "type": "i-i-s-storage-состояние-накладной",
+      "flexberryType": "СостояниеНакладной",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "сумма",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "фИОПолучателя",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "сотрудник",
+      "relatedTo": "i-i-s-storage-сотрудник",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "записьВНакладной",
+      "relatedTo": "i-i-s-storage-запись-в-накладной",
+      "inverse": "накладная"
+    }
+  ],
+  "projections": [
+    {
+      "name": "НакладнаяE",
+      "modelName": "i-i-s-storage-накладная",
+      "attrs": [
+        {
+          "name": "примечание",
+          "caption": "Примечание",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОтгрузки",
+          "caption": "Дата отгрузки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "вес",
+          "caption": "Вес",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "фИОПолучателя",
+          "caption": "Ф и о получателя",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "ЗаписьВНакладнойE",
+          "caption": "Запись в накладной",
+          "name": "записьВНакладной",
+          "relatedTo": "i-i-s-storage-запись-в-накладной",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "НакладнаяL",
+      "modelName": "i-i-s-storage-накладная",
+      "attrs": [
+        {
+          "name": "примечание",
+          "caption": "Примечание",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "сумма",
+          "caption": "Сумма",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "датаОтгрузки",
+          "caption": "Дата отгрузки",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "вес",
+          "caption": "Вес",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "фИОПолучателя",
+          "caption": "Ф и о получателя",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

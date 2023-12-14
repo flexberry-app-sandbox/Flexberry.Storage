@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-storage-заказ-e",
+  "editForm": "i-i-s-storage-заказ-e",
+  "external": false,
+  "caption": "Заказ",
+  "name": "IISStorageЗаказL",
+  "className": "ЗаказL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-storage-заказ",
+      "modelProjection": "ЗаказL"
+    }
+  ]
+}
